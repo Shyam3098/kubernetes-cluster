@@ -1,0 +1,144 @@
+shyam@SHYAM MINGW64 ~
+$ eksctl get cluster --region eu-west-1
+No clusters found
+
+2025-09-07 22:31:33 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=eu-west-1 --cluster=rd-workers'le or try 'eksctl utils describe-stacks --region=eu-west-1 --cluster=rd-workers'licAccess=true, privateAccess=false} for cluster "rd-workers" in "eu-west-1"
+2025-09-07 22:31:33 [ℹ]  Kubernetes API endpoint access will use default of {pubworkers" in "eu-west-1"licAccess=true, privateAccess=false} for cluster "rd-workers" in "eu-west-1"    ging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=eu-west-1 --cluster=rd-workers'
+2025-09-07 22:31:33 [ℹ]  CloudWatch logging will not be enabled for cluster "rd-roxy were not specified, will install them as EKS addonsworkers" in "eu-west-1"
+2025-09-07 22:31:33 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=eu-west-1 --cluster=rd-workers'
+2025-09-07 22:31:33 [ℹ]  default addons coredns, metrics-server, vpc-cni, kube-proxy were not specified, will install them as EKS addons
+2025-09-07 22:31:33 [ℹ]
+2 sequential tasks: { create cluster control plane "rd-workers",
+    2 sequential sub-tasks: {
+        2 sequential sub-tasks: {
+            1 task: { create addons },
+            wait for control plane to become ready,
+        },
+        create managed nodegroup "rd-workers-nodegroup",
+    }
+}
+2025-09-07 22:31:33 [ℹ]  building cluster stack "eksctl-rd-workers-cluster"
+2025-09-07 22:31:34 [ℹ]  deploying stack "eksctl-rd-workers-cluster"
+2025-09-07 22:32:04 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-cluster"
+2025-09-07 22:32:34 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-cluster"
+2025-09-07 22:33:34 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-cluster"
+2025-09-07 22:34:34 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-cluster"
+2025-09-07 22:35:34 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-cluster"
+2025-09-07 22:36:34 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-cluster"
+2025-09-07 22:37:35 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-cluster"
+2025-09-07 22:40:17 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-cluster"
+2025-09-07 22:40:39 [ℹ]  creating addon: coredns
+2025-09-07 22:40:39 [ℹ]  successfully created addon: coredns
+2025-09-07 22:40:40 [ℹ]  creating addon: metrics-server
+2025-09-07 22:40:40 [ℹ]  successfully created addon: metrics-server
+2025-09-07 22:40:41 [!]  recommended policies were found for "vpc-cni" addon, but since OIDC is disabled on the cluster, eksctl cannot configure the requested permissions; the recommended way to provide IAM permissions for "vpc-cni" addon is via pod identity associations; after addon creation is completed, add all recommended policies to the config file, under `addon.PodIdentityAssociations`, and run `eksctl update addon`
+2025-09-07 22:40:41 [ℹ]  creating addon: vpc-cni
+2025-09-07 22:40:41 [ℹ]  successfully created addon: vpc-cni
+2025-09-07 22:40:42 [ℹ]  creating addon: kube-proxy
+2025-09-07 22:40:42 [ℹ]  successfully created addon: kube-proxy
+2025-09-07 22:42:43 [ℹ]  building managed nodegroup stack "eksctl-rd-workers-nodegroup-rd-workers-nodegroup"
+2025-09-07 22:42:43 [ℹ]  deploying stack "eksctl-rd-workers-nodegroup-rd-workers-nodegroup"
+2025-09-07 22:42:43 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-nodegroup-rd-workers-nodegroup"
+2025-09-07 22:43:13 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-nodegroup-rd-workers-nodegroup"
+2025-09-07 22:43:57 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-nodegroup-rd-workers-nodegroup"
+2025-09-07 22:44:42 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-nodegroup-rd-workers-nodegroup"
+2025-09-07 22:45:50 [ℹ]  waiting for CloudFormation stack "eksctl-rd-workers-nodegroup-rd-workers-nodegroup"
+2025-09-07 22:45:50 [ℹ]  waiting for the control plane to become ready
+2025-09-07 22:45:51 [✔]  saved kubeconfig as "C:\\Users\\shyam\\.kube\\config"
+2025-09-07 22:45:51 [ℹ]  no tasks
+2025-09-07 22:45:51 [✔]  all EKS cluster resources for "rd-workers" have been created
+2025-09-07 22:45:51 [ℹ]  nodegroup "rd-workers-nodegroup" has 2 node(s)
+2025-09-07 22:45:51 [ℹ]  node "ip-192-168-10-241.eu-west-1.compute.internal" is ready
+2025-09-07 22:45:51 [ℹ]  node "ip-192-168-32-226.eu-west-1.compute.internal" is ready
+2025-09-07 22:45:51 [ℹ]  waiting for at least 1 node(s) to become ready in "rd-workers-nodegroup"
+2025-09-07 22:45:51 [ℹ]  nodegroup "rd-workers-nodegroup" has 2 node(s)
+2025-09-07 22:45:51 [ℹ]  node "ip-192-168-10-241.eu-west-1.compute.internal" is ready
+2025-09-07 22:45:51 [ℹ]  node "ip-192-168-32-226.eu-west-1.compute.internal" is ready
+2025-09-07 22:45:51 [✔]  created 1 managed nodegroup(s) in cluster "rd-workers"
+2025-09-07 22:45:53 [ℹ]  kubectl command should work with "C:\\Users\\shyam\\.kube\\config", try 'kubectl get nodes'
+2025-09-07 22:45:53 [✔]  EKS cluster "rd-workers" in "eu-west-1" region is ready
+
+shyam@SHYAM MINGW64 ~
+$ kubectl get nodes
+NAME                                           STATUS   ROLES    AGE    VERSION
+ip-192-168-10-241.eu-west-1.compute.internal   Ready    <none>   2m9s   v1.28.15-eks-3abbec1
+ip-192-168-32-226.eu-west-1.compute.internal   Ready    <none>   2m9s   v1.28.15-eks-3abbec1
+
+shyam@SHYAM MINGW64 ~
+$ kubectl create deployment nginx --image=nginx:latest
+kubectl expose deployment nginx --type=LoadBalancer --port=80
+kubectl get pods -o wide
+kubectl get svc
+deployment.apps/nginx created
+service/nginx exposed
+NAME                     READY   STATUS              RESTARTS   AGE   IP       NODE                                           NOMINATED NODE   READINESS GATES
+nginx-56fcf95486-j56bm   0/1     ContainerCreating   0          4s    <none>   ip-192-168-10-241.eu-west-1.compute.internal   <none>           <none>
+NAME         TYPE           CLUSTER-IP     EXTERNAL-IP
+                                     PORT(S)        AGE
+kubernetes   ClusterIP      10.100.0.1     <none>
+                                     443/TCP        9m35s
+nginx        LoadBalancer   10.100.22.55   afc7c23e260e74cb9a74da1ecfd97f88-2031571288.eu-west-1.elb.amazonaws.com   80:31748/TCP   5s
+
+shyam@SHYAM MINGW64 ~
+$ ^C
+
+shyam@SHYAM MINGW64 ~
+$ kubectl get pods -o wide
+NAME                     READY   STATUS    RESTARTS   AGE    IP               NODE                                           NOMINATED NODE   READINESS GATES
+nginx-56fcf95486-j56bm   1/1     Running   0          119s   192.168.31.100   ip-192-168-10-241.eu-west-1.compute.internal   <none>           <none>
+
+shyam@SHYAM MINGW64 ~
+$ kubectl describe pod nginx-56fcf95486-j56bm
+Name:             nginx-56fcf95486-j56bm
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             ip-192-168-10-241.eu-west-1.compute.internal/192.168.10.241
+Start Time:       Sun, 07 Sep 2025 22:46:55 +0100
+Labels:           app=nginx
+                  pod-template-hash=56fcf95486
+Annotations:      <none>
+Status:           Running
+IP:               192.168.31.100
+IPs:
+  IP:           192.168.31.100
+Controlled By:  ReplicaSet/nginx-56fcf95486
+Containers:
+  nginx:
+    Container ID:   containerd://8179405d2a0769f9a98f113ad098b5acb9532151307ab2cceb8fe43b14a60456
+    Image:          nginx:latest
+    Image ID:       docker.io/library/nginx@sha256:33e0bbc7ca9ecf108140af6288c7c9d1ecc77548cbfd3952fd8466a75edefe57
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 07 Sep 2025 22:47:01 +0100
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-z2st7 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-z2st7:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  6m16s  default-scheduler  Successfully assigned default/nginx-56fcf95486-j56bm to ip-192-168-10-241.eu-west-1.compute.internal
+  Normal  Pulling    6m16s  kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     6m11s  kubelet            Successfully pulled image "nginx:latest" in 5.051s (5.051s including waiting)
+  Normal  Created    6m11s  kubelet            Created container nginx
+  Normal  Started    6m11s  kubelet            Started container nginx
